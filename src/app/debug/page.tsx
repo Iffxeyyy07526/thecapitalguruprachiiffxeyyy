@@ -1,6 +1,10 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { BRAND_LOGO_FILES, IMAGES_DIR_FILES } from "@/lib/assets/paths";
+import {
+  BRAND_LOGO_FILES,
+  HOSTED_LOGOS,
+  IMAGES_DIR_FILES,
+} from "@/lib/assets/paths";
 
 export const metadata: Metadata = {
   title: "Asset debug",
@@ -15,8 +19,41 @@ export default function DebugAssetsPage() {
       </h1>
       <p className="mt-2 text-sm text-secondary">
         Brand assets at <code className="text-primary">/public</code> and hero files under{" "}
-        <code className="text-primary">/public/images</code>.
+        <code className="text-primary">/public/images</code>. Public URLs use{" "}
+        <code className="text-primary">NEXT_PUBLIC_APP_URL</code> (defaults to thecapitalguru.net).
       </p>
+
+      <section className="mt-10">
+        <h2 className="font-label text-xs font-bold uppercase tracking-[0.2em] text-secondary">
+          Hosted logo links
+        </h2>
+        <p className="mt-2 text-sm text-secondary">
+          Copy these after deploy (same files as in <code className="text-primary">/public</code>).
+        </p>
+        <ul className="mt-4 space-y-4">
+          {(
+            [
+              ["Transparent wordmark (PNG)", HOSTED_LOGOS.wordmarkTransparent],
+              ["Square symbol (JPEG)", HOSTED_LOGOS.symbol],
+              ["Mark on black — favicon style (JPEG)", HOSTED_LOGOS.markOnBlack],
+            ] as const
+          ).map(([label, href]) => (
+            <li
+              key={href}
+              className="rounded-xl border border-white/[0.08] bg-surface-container/40 p-4"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wide text-on-surface-muted">
+                {label}
+              </p>
+              <p className="mt-2 break-all font-mono text-[11px] text-primary">
+                <a href={href} className="underline-offset-2 hover:underline" target="_blank" rel="noreferrer">
+                  {href}
+                </a>
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section className="mt-10">
         <h2 className="font-label text-xs font-bold uppercase tracking-[0.2em] text-secondary">

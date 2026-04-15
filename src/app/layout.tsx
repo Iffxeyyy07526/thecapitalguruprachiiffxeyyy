@@ -13,8 +13,13 @@ import { SITE_URL } from "@/lib/seo/site";
 import { SOCIAL_INSTAGRAM_URL, SOCIAL_TELEGRAM_URL } from "@/lib/social";
 import { ASSETS } from "@/lib/assets/paths";
 
+const GOOGLE_SITE_VERIFICATION_DEFAULT =
+  "oIHhGgwb4O-Xs9_hzmlO7RLDLfvSJAkpdZEJd-wJtAA";
+
 function siteVerificationMetadata(): Metadata["verification"] | undefined {
-  const google = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+  const google =
+    process.env.GOOGLE_SITE_VERIFICATION?.trim() ||
+    GOOGLE_SITE_VERIFICATION_DEFAULT;
   const yandex = process.env.YANDEX_SITE_VERIFICATION?.trim();
   const out: NonNullable<Metadata["verification"]> = {};
   if (google && google.length >= 8) out.google = google;

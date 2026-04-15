@@ -1,9 +1,9 @@
-import { ASSETS } from "@/lib/assets/paths";
+import { HOSTED_LOGOS } from "@/lib/assets/paths";
 import { SITE_URL } from "@/lib/seo/site";
 import { SOCIAL_INSTAGRAM_URL } from "@/lib/social";
 
-/** Logo served from production CDN path (transparent wordmark PNG). */
-export const SCHEMA_LOGO_URL = `${SITE_URL.replace(/\/$/, "")}${ASSETS.logos.main}`;
+/** Logo served from production origin (transparent wordmark PNG). */
+export const SCHEMA_LOGO_URL = HOSTED_LOGOS.wordmarkTransparent;
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",

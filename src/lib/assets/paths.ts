@@ -1,3 +1,5 @@
+import { absoluteUrl } from "@/lib/seo/site";
+
 /**
  * Brand assets in `/public`.
  * - `logo-main.png`: transparent horizontal wordmark (UI + email).
@@ -31,6 +33,17 @@ export const ASSETS = {
     heroFallbackPng: "/images/hero-fallback.png",
     heroFallbackSvg: "/images/hero-fallback.svg",
   },
+} as const;
+
+/**
+ * Absolute URLs for logos (uses `NEXT_PUBLIC_APP_URL`, default https://thecapitalguru.net).
+ * Use these in emails, OG tags, partner pages, or anywhere you need a shareable link.
+ */
+export const HOSTED_LOGOS = {
+  wordmarkTransparent: absoluteUrl(ASSETS.logos.main),
+  symbol: absoluteUrl(ASSETS.logos.icon),
+  /** Black-tile mark — favicon / app icon style. */
+  markOnBlack: absoluteUrl(ASSETS.logos.mark),
 } as const;
 
 export const IMAGES_DIR_FILES = [
