@@ -151,12 +151,21 @@ export const metadata: Metadata = {
     },
   },
   ...(verificationMeta ? { verification: verificationMeta } : {}),
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: ASSETS.logos.favicon, type: "image/jpeg", sizes: "1024x1024" },
+      { url: ASSETS.logos.favicon, sizes: "any" },
+      { url: ASSETS.logos.favicon32, type: "image/png", sizes: "32x32" },
+      { url: ASSETS.logos.favicon16, type: "image/png", sizes: "16x16" },
     ],
     shortcut: ASSETS.logos.favicon,
-    apple: ASSETS.logos.appleTouch,
+    apple: [
+      {
+        url: ASSETS.logos.appleTouch,
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
   },
   category: "finance",
   formatDetection: {

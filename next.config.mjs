@@ -11,21 +11,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/favicon.ico",
-        destination: "/logo-mark.jpg",
-        permanent: false,
-      },
-      {
-        source: "/favicon.png",
-        destination: "/logo-mark.jpg",
-        permanent: true,
-      },
-      {
-        source: "/apple-touch-icon.png",
-        destination: "/logo-mark.jpg",
-        permanent: true,
-      },
-      {
         source: "/logo-horizontal.png",
         destination: "/logo-main.png",
         permanent: true,

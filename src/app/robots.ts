@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo/site";
 
+const base = SITE_URL.replace(/\/$/, "");
+
+/** Paths crawlers should not index (auth, app, APIs, tooling). */
 const DISALLOW = [
   "/dashboard/",
   "/api/",
@@ -11,7 +14,7 @@ const DISALLOW = [
   "/forgot-password/",
   "/reset-password/",
   "/unverified/",
-];
+] as const;
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -19,35 +22,23 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: DISALLOW,
-        crawlDelay: 10,
+        disallow: [...DISALLOW],
       },
       {
         userAgent: "Googlebot",
         allow: "/",
-        disallow: [
-          "/dashboard/",
-          "/api/",
-          "/payment/",
-          "/private/",
-          "/admin/",
-          "/debug/",
-        ],
+        disallow: [...DISALLOW],
       },
       {
-        userAgent: "GPTBot",
-        disallow: "/",
+        userAgent: "Googlebot-Image",
+        allow: "/",
+        disallow: [...DISALLOW],
       },
-      {
-        userAgent: "CCBot",
-        disallow: "/",
-      },
-      {
-        userAgent: "anthropic-ai",
-        disallow: "/",
-      },
+      { userAgent: "GPTBot", disallow: "/" },
+      { userAgent: "CCBot", disallow: "/" },
+      { userAgent: "anthropic-ai", disallow: "/" },
     ],
-    sitemap: `${SITE_URL.replace(/\/$/, "")}/sitemap.xml`,
-    host: SITE_URL.replace(/\/$/, ""),
+    sitemap: `${base}/sitemap.xml`,
+    host: base,
   };
 }

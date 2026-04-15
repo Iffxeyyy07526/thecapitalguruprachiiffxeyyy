@@ -19,9 +19,13 @@ export const ASSETS = {
     horizontalBlack: "/logo-main.png",
     horizontalWhite: "/logo-main.png",
     symbol: "/logo-icon.jpg",
-    favicon: "/logo-mark.jpg",
-    appleTouch: "/logo-mark.jpg",
-    appIcon: "/logo-mark.jpg",
+    favicon: "/favicon.ico",
+    favicon16: "/favicon-16x16.png",
+    favicon32: "/favicon-32x32.png",
+    appleTouch: "/apple-touch-icon.png",
+    appIcon: "/android-chrome-512x512.png",
+    android192: "/android-chrome-192x192.png",
+    android512: "/android-chrome-512x512.png",
     watermark: "/logo-icon.jpg",
     pill: "/logo-main.png",
     stacked: "/logo-main.png",
@@ -42,8 +46,9 @@ export const ASSETS = {
 export const HOSTED_LOGOS = {
   wordmarkTransparent: absoluteUrl(ASSETS.logos.main),
   symbol: absoluteUrl(ASSETS.logos.icon),
-  /** Black-tile mark — favicon / app icon style. */
+  /** Black-tile mark — brand mark file. */
   markOnBlack: absoluteUrl(ASSETS.logos.mark),
+  faviconIco: absoluteUrl(ASSETS.logos.favicon),
 } as const;
 
 export const IMAGES_DIR_FILES = [

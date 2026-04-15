@@ -36,6 +36,7 @@ export default function DebugAssetsPage() {
               ["Transparent wordmark (PNG)", HOSTED_LOGOS.wordmarkTransparent],
               ["Square symbol (JPEG)", HOSTED_LOGOS.symbol],
               ["Mark on black — favicon style (JPEG)", HOSTED_LOGOS.markOnBlack],
+              ["Favicon (ICO)", HOSTED_LOGOS.faviconIco],
             ] as const
           ).map(([label, href]) => (
             <li
