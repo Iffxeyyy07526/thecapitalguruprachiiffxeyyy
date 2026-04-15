@@ -12,7 +12,8 @@ export const runtime = "nodejs";
 
 /**
  * Repairs inconsistent payment ↔ subscription rows by re-running idempotent fulfillment.
- * Schedule every 5–10 minutes (e.g. Vercel cron). Secure with CRON_SECRET.
+ * Vercel Hobby: schedule at most once per day (see vercel.json). Secure with CRON_SECRET.
+ * For more frequent runs, use Pro or an external scheduler hitting this route.
  */
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
