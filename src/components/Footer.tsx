@@ -93,10 +93,10 @@ export function Footer() {
               <li>
                 <div className="text-[9px] font-bold text-on-surface-muted/50 uppercase tracking-widest mb-1.5 font-mono">Email Us</div>
                 <a
-                  href="mailto:support@thecapitalguru.net"
+                  href="mailto:mahir@thecapitalguru.net"
                   className="text-xs font-bold text-white hover:text-primary transition-colors"
                 >
-                  support@thecapitalguru.net
+                  mahir@thecapitalguru.net
                 </a>
               </li>
               <li>

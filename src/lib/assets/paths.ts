@@ -1,26 +1,28 @@
 /**
- * Brand assets: three PNGs in `/public` (provided art).
- * Paths are root-absolute (Vercel/Linux case-sensitive).
+ * Brand assets in `/public`.
+ * - `logo-main.png`: transparent horizontal wordmark (UI + email).
+ * - `logo-icon.jpg`: square mark for symbol/watermark (UI only).
+ * - `logo-mark.jpg`: square mark on black (favicon / PWA / apple-touch only).
  */
 export const ASSETS = {
   logos: {
     /** Full horizontal wordmark (transparent). */
     main: "/logo-main.png",
-    /** Square symbol (transparent). */
-    icon: "/logo-icon.png",
-    /** Square mark (solid/black background). */
-    mark: "/logo-mark.png",
+    /** Square symbol (UI / watermark). */
+    icon: "/logo-icon.jpg",
+    /** Square mark (solid black background) — favicon & touch icons only. */
+    mark: "/logo-mark.jpg",
     // Aliases for existing call sites
     horizontal: "/logo-main.png",
     horizontalBlack: "/logo-main.png",
     horizontalWhite: "/logo-main.png",
-    symbol: "/logo-icon.png",
-    favicon: "/logo-mark.png",
-    appleTouch: "/logo-mark.png",
-    appIcon: "/logo-mark.png",
-    watermark: "/logo-icon.png",
+    symbol: "/logo-icon.jpg",
+    favicon: "/logo-mark.jpg",
+    appleTouch: "/logo-mark.jpg",
+    appIcon: "/logo-mark.jpg",
+    watermark: "/logo-icon.jpg",
     pill: "/logo-main.png",
-    stacked: "/logo-icon.png",
+    stacked: "/logo-main.png",
     monoBlack: "/logo-main.png",
     monoWhite: "/logo-main.png",
   },
@@ -40,6 +42,6 @@ export const IMAGES_DIR_FILES = [
 /** Brand logos at `/public` root (for debug page). */
 export const BRAND_LOGO_FILES = [
   "logo-main.png",
-  "logo-icon.png",
-  "logo-mark.png",
+  "logo-icon.jpg",
+  "logo-mark.jpg",
 ] as const;

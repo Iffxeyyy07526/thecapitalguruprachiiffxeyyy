@@ -14,7 +14,7 @@ export default function DebugAssetsPage() {
         Static asset smoke test
       </h1>
       <p className="mt-2 text-sm text-secondary">
-        Brand PNGs at <code className="text-primary">/public</code> and hero assets under{" "}
+        Brand assets at <code className="text-primary">/public</code> and hero files under{" "}
         <code className="text-primary">/public/images</code>.
       </p>
 

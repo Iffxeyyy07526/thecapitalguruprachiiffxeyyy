@@ -36,7 +36,7 @@ export default function RefundPolicyPage() {
         <h2>How to Claim</h2>
         <p>
           Email{" "}
-          <a href="mailto:support@thecapitalguru.net">support@thecapitalguru.net</a> within{" "}
+          <a href="mailto:mahir@thecapitalguru.net">mahir@thecapitalguru.net</a> within{" "}
           <strong>48 hours</strong> of payment with your <strong>payment ID</strong> (Razorpay order
           or payment reference) and the email used on your account. Late requests may be declined.
         </p>
@@ -63,7 +63,7 @@ export default function RefundPolicyPage() {
       <section>
         <h2>Contact</h2>
         <p>
-          <a href="mailto:support@thecapitalguru.net">support@thecapitalguru.net</a>
+          <a href="mailto:mahir@thecapitalguru.net">mahir@thecapitalguru.net</a>
         </p>
       </section>
     </LegalPageShell>

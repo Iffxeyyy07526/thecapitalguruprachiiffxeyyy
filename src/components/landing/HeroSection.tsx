@@ -36,8 +36,7 @@ export function HeroSection() {
             className="mb-8 flex justify-center lg:mb-10 lg:justify-start"
           >
             <Logo
-              composition="stacked"
-              className="h-auto w-[min(200px,72vw)] max-w-[200px] opacity-[0.96]"
+              className="h-auto w-[min(320px,88vw)] max-w-[360px] opacity-[0.96] sm:max-w-[400px]"
               priority
             />
           </motion.div>

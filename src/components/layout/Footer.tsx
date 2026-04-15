@@ -129,10 +129,10 @@ export function Footer() {
           <ul className="space-y-3">
             <li>
               <a
-                href="mailto:support@thecapitalguru.net"
+                href="mailto:mahir@thecapitalguru.net"
                 className="link-premium text-sm text-secondary transition-colors duration-200 hover:text-on-surface"
               >
-                support@thecapitalguru.net
+                mahir@thecapitalguru.net
               </a>
             </li>
           </ul>

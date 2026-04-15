@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     title:
       "10,000+ Traders | 87% Win Rate — NSE/BSE Signals on Telegram | The Capital Guru",
     description: META_DESC_ROOT,
-    emails: ["support@thecapitalguru.net"],
+    emails: ["mahir@thecapitalguru.net"],
     images: [
       {
         url: ASSETS.images.heroFallbackPng,
@@ -148,7 +148,7 @@ export const metadata: Metadata = {
   ...(verificationMeta ? { verification: verificationMeta } : {}),
   icons: {
     icon: [
-      { url: ASSETS.logos.favicon, type: "image/png", sizes: "1024x1024" },
+      { url: ASSETS.logos.favicon, type: "image/jpeg", sizes: "1024x1024" },
     ],
     shortcut: ASSETS.logos.favicon,
     apple: ASSETS.logos.appleTouch,

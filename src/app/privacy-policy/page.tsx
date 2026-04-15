@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
         <h2>Contact</h2>
         <p>
           Privacy questions:{" "}
-          <a href="mailto:support@thecapitalguru.net">support@thecapitalguru.net</a>
+          <a href="mailto:mahir@thecapitalguru.net">mahir@thecapitalguru.net</a>
         </p>
       </section>
     </LegalPageShell>

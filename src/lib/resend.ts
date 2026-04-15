@@ -20,7 +20,7 @@ function getResend(): Resend {
   }
 
   const rawFrom =
-    process.env.RESEND_FROM_EMAIL || "noreply@thecapitalguru.net";
+    process.env.RESEND_FROM_EMAIL || "mahir@thecapitalguru.net";
   const addr = extractFromAddress(rawFrom).toLowerCase();
   const domain = (
     process.env.RESEND_ALLOWED_SENDING_DOMAIN || "thecapitalguru.net"
@@ -46,7 +46,7 @@ async function safeSend({
   try {
     const resend = getResend();
     const rawFrom =
-      process.env.RESEND_FROM_EMAIL || "noreply@thecapitalguru.net";
+      process.env.RESEND_FROM_EMAIL || "mahir@thecapitalguru.net";
     const cleanFrom = rawFrom.includes("<")
       ? rawFrom
       : `The Capital Guru <${rawFrom}>`;
@@ -330,7 +330,7 @@ export async function sendSupportEmail({
   });
 
   return safeSend({
-    to: "support@thecapitalguru.net",
+    to: "mahir@thecapitalguru.net",
     subject: `[Support] ${subject}`,
     html,
   });

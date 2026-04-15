@@ -49,8 +49,7 @@ function AuthBrandPane() {
         <div>
           <Link href="/" className="inline-block transition-opacity hover:opacity-90">
             <Logo
-              composition="stacked"
-              className="h-auto w-[140px] sm:w-[160px]"
+              className="h-auto w-[min(240px,85%)] max-w-[280px] sm:max-w-[300px]"
               priority
             />
           </Link>

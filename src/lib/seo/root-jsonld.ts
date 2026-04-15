@@ -2,8 +2,8 @@ import { ASSETS } from "@/lib/assets/paths";
 import { SITE_URL } from "@/lib/seo/site";
 import { SOCIAL_INSTAGRAM_URL } from "@/lib/social";
 
-/** Logo served from production CDN path (use PNG when available; SVG is valid for schema). */
-export const SCHEMA_LOGO_URL = `${SITE_URL.replace(/\/$/, "")}${ASSETS.logos.symbol}`;
+/** Logo served from production CDN path (transparent wordmark PNG). */
+export const SCHEMA_LOGO_URL = `${SITE_URL.replace(/\/$/, "")}${ASSETS.logos.main}`;
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -16,7 +16,7 @@ export const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
-    email: "support@thecapitalguru.net",
+    email: "mahir@thecapitalguru.net",
     availableLanguage: ["English", "Hindi"],
   },
   sameAs: [

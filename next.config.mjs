@@ -6,13 +6,23 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/logo-transparent.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/favicon.ico",
+        destination: "/logo-mark.jpg",
+        permanent: false,
+      },
+      {
         source: "/favicon.png",
-        destination: "/logo-mark.png",
+        destination: "/logo-mark.jpg",
         permanent: true,
       },
       {
         source: "/apple-touch-icon.png",
-        destination: "/logo-mark.png",
+        destination: "/logo-mark.jpg",
         permanent: true,
       },
       {
@@ -32,12 +42,12 @@ const nextConfig = {
       },
       {
         source: "/logo-app-icon.png",
-        destination: "/logo-mark.png",
+        destination: "/logo-mark.jpg",
         permanent: true,
       },
       {
         source: "/logo-watermark.png",
-        destination: "/logo-icon.png",
+        destination: "/logo-icon.jpg",
         permanent: true,
       },
       {
@@ -47,7 +57,7 @@ const nextConfig = {
       },
       {
         source: "/logo-stacked.png",
-        destination: "/logo-icon.png",
+        destination: "/logo-icon.jpg",
         permanent: true,
       },
       {
@@ -77,32 +87,32 @@ const nextConfig = {
       },
       {
         source: "/logos/capital-guru-symbol.png",
-        destination: "/logo-icon.png",
+        destination: "/logo-icon.jpg",
         permanent: true,
       },
       {
         source: "/logos/capital-guru-favicon.png",
-        destination: "/logo-mark.png",
+        destination: "/logo-mark.jpg",
         permanent: true,
       },
       {
         source: "/logos/capital-guru-apple-touch.png",
-        destination: "/logo-mark.png",
+        destination: "/logo-mark.jpg",
         permanent: true,
       },
       {
         source: "/logos/capital-guru-app-icon.png",
-        destination: "/logo-mark.png",
+        destination: "/logo-mark.jpg",
         permanent: true,
       },
       {
         source: "/logos/capital-guru-watermark.png",
-        destination: "/logo-icon.png",
+        destination: "/logo-icon.jpg",
         permanent: true,
       },
       {
         source: "/logos/capital-guru-stacked.png",
-        destination: "/logo-icon.png",
+        destination: "/logo-icon.jpg",
         permanent: true,
       },
       {

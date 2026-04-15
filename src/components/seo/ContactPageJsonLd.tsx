@@ -11,7 +11,7 @@ const contactPageJsonLd = {
     "@type": "Organization",
     name: "The Capital Guru",
     url: SITE_URL,
-    email: "support@thecapitalguru.net",
+    email: "mahir@thecapitalguru.net",
   },
 } as const;
 
