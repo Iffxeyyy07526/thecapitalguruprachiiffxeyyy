@@ -1,7 +1,9 @@
+import { ASSETS } from "@/lib/assets/paths";
 import { SITE_URL } from "@/lib/seo/site";
+import { SOCIAL_INSTAGRAM_URL } from "@/lib/social";
 
 /** Logo served from production CDN path (use PNG when available; SVG is valid for schema). */
-export const SCHEMA_LOGO_URL = `${SITE_URL.replace(/\/$/, "")}/logo-icon.png`;
+export const SCHEMA_LOGO_URL = `${SITE_URL.replace(/\/$/, "")}${ASSETS.logos.symbol}`;
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -19,7 +21,7 @@ export const organizationJsonLd = {
   },
   sameAs: [
     "https://t.me/thecapitalguru",
-    "https://instagram.com/thecapitalguru",
+    SOCIAL_INSTAGRAM_URL,
     "https://twitter.com/thecapitalguru",
   ],
 } as const;

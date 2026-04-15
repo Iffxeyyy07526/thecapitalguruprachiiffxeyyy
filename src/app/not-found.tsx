@@ -1,17 +1,11 @@
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
     <main className="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center bg-background px-4 py-16 text-center">
-      <Image
-        src="/logo-icon.png"
-        alt="The Capital Guru"
-        width={1024}
-        height={1024}
-        className="mb-6 h-10 w-10 opacity-90"
-      />
+      <Logo variant="symbol" className="mb-6 h-10 w-10 opacity-90" />
       <p
         className="font-display text-[120px] font-bold leading-none tracking-tight text-primary"
         aria-hidden

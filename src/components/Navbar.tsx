@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/Button";
 import { useAuthStore } from "@/store/authStore";
 import { SystemStatus } from "@/components/dashboard/SystemStatus";
@@ -40,13 +40,9 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2.5 transition-all hover:scale-[1.02] active:scale-95 group">
                <div className="relative">
                   <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <Image 
-                    src="/logo-horizontal.png" 
-                    alt="The Capital Guru" 
-                    width={846} 
-                    height={235} 
-                    priority 
-                    className="brightness-[1.1] relative z-10"
+                  <Logo
+                    priority
+                    className="relative z-10 brightness-[1.1]"
                   />
                </div>
             </Link>

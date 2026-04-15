@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ASSETS } from "@/lib/assets/paths";
 import { signalService } from "@/services/signalService";
 import { TradingSignal } from "@/types";
 import { Card } from "@/components/ui/Card";
@@ -37,7 +38,7 @@ export function SignalTerminal() {
         aria-hidden
       >
         <Image
-          src="/logo-watermark.png"
+          src={ASSETS.logos.watermark}
           alt=""
           width={420}
           height={420}

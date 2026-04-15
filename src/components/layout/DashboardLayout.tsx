@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useCallback } from "react";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -51,13 +51,7 @@ function Sidebar({ onLogout }: { onLogout: () => void }) {
     <aside className="sticky top-0 hidden h-screen w-[240px] shrink-0 flex-col border-r border-white/[0.06] bg-surface lg:flex">
       <div className="border-b border-white/[0.06] p-6">
         <Link href="/dashboard" className="block opacity-90 transition-opacity hover:opacity-100">
-          <Image
-            src="/logo-horizontal.png"
-            alt="The Capital Guru"
-            width={846}
-            height={235}
-            className="brightness-110"
-          />
+          <Logo className="brightness-110" />
         </Link>
       </div>
 
@@ -150,13 +144,7 @@ function TopBar({ firstName }: { firstName: string }) {
           className="mr-2 hidden shrink-0 opacity-90 transition-opacity hover:opacity-100 sm:block"
           aria-label="Dashboard home"
         >
-          <Image
-            src="/logo-icon.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="h-9 w-9"
-          />
+          <Logo variant="symbol" alt="" className="h-9 w-9" />
         </Link>
         <h1 className="font-display text-base font-bold tracking-tight text-white sm:text-lg">
           {greeting}, {firstName}{" "}
@@ -202,14 +190,7 @@ export function DashboardLayout({
     return (
       <div className="flex min-h-screen items-center justify-center bg-background">
         <div className="flex flex-col items-center gap-5">
-          <Image
-            src="/logo-icon.png"
-            alt="The Capital Guru"
-            width={1024}
-            height={1024}
-            className="h-12 w-12 opacity-90"
-            priority
-          />
+          <Logo variant="symbol" className="h-12 w-12 opacity-90" priority />
           <div className="h-9 w-9 animate-spin rounded-full border-2 border-primary border-t-transparent shadow-glow" />
           <span className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
             Loading dashboard…

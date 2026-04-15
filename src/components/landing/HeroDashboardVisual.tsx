@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { useCallback, useRef } from "react";
+import { ASSETS } from "@/lib/assets/paths";
 import { cn } from "@/lib/utils/cn";
 import { HeroSignalCard } from "@/components/landing/HeroSignalCard";
 
@@ -78,7 +79,7 @@ export function HeroDashboardVisual() {
           }}
         >
           <Image
-            src="/hero-fallback.png"
+            src={ASSETS.images.heroFallbackPng}
             alt="Stock market signals dashboard with live NSE BSE trading data"
             width={1376}
             height={768}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
@@ -103,11 +103,7 @@ export function Navbar() {
           href="/"
           className="group flex items-center gap-2 opacity-[0.96] transition-[opacity,transform] duration-300 ease-out hover:opacity-100"
         >
-          <Image
-            src="/logo-horizontal.png"
-            alt="The Capital Guru"
-            width={846}
-            height={235}
+          <Logo
             className="h-7 w-auto transition-transform duration-300 ease-out group-hover:scale-[1.03] sm:h-8"
             priority
           />

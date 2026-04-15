@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/components/ui/logo";
 import type { SeoBreadcrumbItem } from "@/components/seo/SeoBreadcrumbs";
 import { SeoBreadcrumbs } from "@/components/seo/SeoBreadcrumbs";
 import { cn } from "@/lib/utils/cn";
@@ -48,11 +48,8 @@ function AuthBrandPane() {
       <div className="relative z-10 mx-auto flex w-full max-w-xl flex-col justify-between">
         <div>
           <Link href="/" className="inline-block transition-opacity hover:opacity-90">
-            <Image
-              src="/logo-stacked.png"
-              alt="The Capital Guru"
-              width={160}
-              height={136}
+            <Logo
+              composition="stacked"
               className="h-auto w-[140px] sm:w-[160px]"
               priority
             />

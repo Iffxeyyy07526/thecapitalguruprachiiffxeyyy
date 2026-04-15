@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -60,13 +60,7 @@ export default function ForgotPasswordPage() {
       <div className="w-full max-w-md rounded-2xl border border-outline-variant/70 bg-white/[0.03] p-7 backdrop-blur-md sm:p-8">
         <div className="mb-6 flex justify-center">
           <Link href="/" className="inline-block transition-opacity hover:opacity-90">
-            <Image
-              src="/logo-horizontal.png"
-              alt="The Capital Guru"
-              width={846}
-              height={235}
-              className="h-8 w-auto"
-            />
+            <Logo className="h-8 w-auto" />
           </Link>
         </div>
 

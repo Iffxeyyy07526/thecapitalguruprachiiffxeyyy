@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
@@ -61,11 +61,7 @@ export default async function PaymentPage({
       <div className="mx-auto max-w-5xl">
         <div className="mb-8 text-center lg:text-left">
           <Link href="/" className="mb-6 inline-block transition-opacity hover:opacity-90">
-            <Image
-              src="/logo-horizontal.png"
-              alt="The Capital Guru"
-              width={846}
-              height={235}
+            <Logo
               className="mx-auto h-8 w-auto lg:mx-0"
               priority
             />

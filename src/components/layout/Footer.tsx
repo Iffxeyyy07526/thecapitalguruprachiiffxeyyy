@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import { Instagram } from "lucide-react";
 import {
   SOCIAL_INSTAGRAM_URL,
@@ -47,13 +47,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-5 lg:gap-16 lg:px-8 lg:py-20">
         <div className="space-y-5 lg:col-span-1">
           <Link href="/" className="inline-block transition-opacity hover:opacity-90">
-            <Image
-              src="/logo-horizontal.png"
-              alt="The Capital Guru"
-              width={846}
-              height={235}
-              className="h-8 w-auto"
-            />
+            <Logo className="h-8 w-auto" />
           </Link>
           <p className="text-sm leading-relaxed text-on-surface-muted">
             Trade Smarter. Profit Faster.

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -79,11 +79,8 @@ export function PageLoader() {
                 transition={reduce ? undefined : { duration: 2.4, repeat: Infinity, ease: "easeOut" }}
                 className="relative rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 shadow-[0_12px_48px_-12px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-sm"
               >
-                <Image
-                  src="/logo-icon.png"
-                  alt="The Capital Guru"
-                  width={1024}
-                  height={1024}
+                <Logo
+                  variant="symbol"
                   className="relative h-14 w-14 drop-shadow-[0_0_24px_rgba(93,214,44,0.45)]"
                   priority
                 />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils/cn";
@@ -25,13 +25,7 @@ export default function AppError({
     <main className="flex min-h-[calc(100vh-8rem)] items-center justify-center bg-background px-4 py-16">
       <div className="legal-glass-card max-w-md px-8 py-10 text-center">
         <div className="flex justify-center">
-          <Image
-            src="/logo-icon.png"
-            alt="The Capital Guru"
-            width={1024}
-            height={1024}
-            className="h-11 w-11"
-          />
+          <Logo variant="symbol" className="h-11 w-11" />
         </div>
         <p className="mt-5 font-label text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
           The Capital Guru

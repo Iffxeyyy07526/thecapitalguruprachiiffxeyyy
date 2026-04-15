@@ -7,6 +7,7 @@ const DISALLOW = [
   "/payment/",
   "/private/",
   "/admin/",
+  "/debug/",
   "/forgot-password/",
   "/reset-password/",
   "/unverified/",
@@ -30,6 +31,7 @@ export default function robots(): MetadataRoute.Robots {
           "/payment/",
           "/private/",
           "/admin/",
+          "/debug/",
         ],
       },
       {

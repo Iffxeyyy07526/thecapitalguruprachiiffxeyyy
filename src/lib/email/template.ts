@@ -1,5 +1,6 @@
 import "server-only";
 
+import { ASSETS } from "@/lib/assets/paths";
 import {
   SOCIAL_INSTAGRAM_HANDLE,
   SOCIAL_INSTAGRAM_URL,
@@ -173,7 +174,7 @@ export function generateEmailTemplate({
     : "";
 
   const appDomain = process.env.NEXT_PUBLIC_APP_URL || "https://thecapitalguru.net";
-  const logoUrl = `${appDomain.replace(/\/$/, "")}/logo-mono-white.png`;
+  const logoUrl = `${appDomain.replace(/\/$/, "")}${ASSETS.logos.monoWhite}`;
 
   const socialFollowBlock = `
  <p style="margin:16px 0 0;font-family:Inter,system-ui,sans-serif;font-size:11px;line-height:1.65;color:${COLORS.secondary};text-align:center;">

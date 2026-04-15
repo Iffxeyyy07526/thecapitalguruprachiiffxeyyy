@@ -11,6 +11,7 @@ import { validateEnv } from "@/lib/env";
 import { META_DESC_ROOT } from "@/lib/seo/descriptions";
 import { SITE_URL } from "@/lib/seo/site";
 import { SOCIAL_INSTAGRAM_URL, SOCIAL_TELEGRAM_URL } from "@/lib/social";
+import { ASSETS } from "@/lib/assets/paths";
 
 function siteVerificationMetadata(): Metadata["verification"] | undefined {
   const google = process.env.GOOGLE_SITE_VERIFICATION?.trim();
@@ -111,7 +112,7 @@ export const metadata: Metadata = {
     emails: ["support@thecapitalguru.net"],
     images: [
       {
-        url: "/hero-fallback.png",
+        url: ASSETS.images.heroFallbackPng,
         width: 1376,
         height: 768,
         alt: "Stock market signals dashboard with live NSE BSE trading data — The Capital Guru",
@@ -125,7 +126,7 @@ export const metadata: Metadata = {
     title: "Capital Guru | 10k+ Traders, 87% Win | NSE/BSE Telegram Signals",
     description:
       "India's top Telegram signals for NSE/BSE. 500+ calls/mo. Join 10,000+ traders—start free today before seats close.",
-    images: ["/hero-fallback.png"],
+    images: [ASSETS.images.heroFallbackPng],
   },
   other: {
     "telegram:channel": SOCIAL_TELEGRAM_URL,
@@ -146,9 +147,11 @@ export const metadata: Metadata = {
   },
   ...(verificationMeta ? { verification: verificationMeta } : {}),
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png", sizes: "1024x1024" }],
-    shortcut: "/favicon.png",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: ASSETS.logos.favicon, type: "image/png", sizes: "1024x1024" },
+    ],
+    shortcut: ASSETS.logos.favicon,
+    apple: ASSETS.logos.appleTouch,
   },
   category: "finance",
   formatDetection: {

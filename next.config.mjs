@@ -3,6 +3,140 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/favicon.png",
+        destination: "/logo-mark.png",
+        permanent: true,
+      },
+      {
+        source: "/apple-touch-icon.png",
+        destination: "/logo-mark.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-horizontal.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-horizontal-black.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-horizontal-white.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-app-icon.png",
+        destination: "/logo-mark.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-watermark.png",
+        destination: "/logo-icon.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-pill.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-stacked.png",
+        destination: "/logo-icon.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-mono-black.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logo-mono-white.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-horizontal.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-horizontal-black.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-horizontal-white.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-symbol.png",
+        destination: "/logo-icon.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-favicon.png",
+        destination: "/logo-mark.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-apple-touch.png",
+        destination: "/logo-mark.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-app-icon.png",
+        destination: "/logo-mark.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-watermark.png",
+        destination: "/logo-icon.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-stacked.png",
+        destination: "/logo-icon.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-mono-black.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-mono-white.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/logos/capital-guru-pill.png",
+        destination: "/logo-main.png",
+        permanent: true,
+      },
+      {
+        source: "/hero.png",
+        destination: "/images/capital-guru-hero.png",
+        permanent: true,
+      },
+      {
+        source: "/hero-fallback.png",
+        destination: "/images/hero-fallback.png",
+        permanent: true,
+      },
+      {
+        source: "/hero-fallback.svg",
+        destination: "/images/hero-fallback.svg",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import {
   SOCIAL_TELEGRAM_HANDLE,
   SOCIAL_TELEGRAM_URL,
@@ -28,13 +28,7 @@ export function Footer() {
           {/* Brand & Mission */}
           <div className="lg:col-span-1 space-y-8">
             <Link href="/" className="inline-block transition-opacity hover:opacity-80">
-              <Image 
-                src="/logo-horizontal.png" 
-                alt="The Capital Guru" 
-                width={846} 
-                height={235} 
-                className="brightness-[1.2]"
-              />
+              <Logo className="brightness-[1.2]" />
             </Link>
             <p className="text-sm font-medium text-on-surface-muted leading-relaxed max-w-sm">
               The leading trading signal platform for the Indian stock market. High-accuracy research and signals for retail traders.

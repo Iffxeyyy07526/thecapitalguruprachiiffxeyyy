@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
@@ -75,11 +75,9 @@ export function ConsentGate({ children }: Readonly<{ children: React.ReactNode }
           ) : (
             <div className="relative w-full max-w-lg rounded-2xl border border-white/[0.1] bg-white/[0.04] p-6 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.75),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-[22px] sm:p-8">
               <div className="mb-6 flex justify-center">
-                <Image
-                  src="/logo-icon.png"
+                <Logo
+                  variant="symbol"
                   alt=""
-                  width={1024}
-                  height={1024}
                   className="h-12 w-12 drop-shadow-[0_0_20px_rgba(93,214,44,0.35)]"
                   priority
                 />
